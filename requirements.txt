@@ -1,0 +1,7 @@
+# requirements.txt
+Flask
+pymongo
+python-dotenv
+flask-bcrypt
+gunicorn
+cloudinary
