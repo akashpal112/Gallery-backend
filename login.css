@@ -1,0 +1,175 @@
+/* login.css: Focused styles for the login form */
+
+/* * NOTE: The overall background, font, and dark theme are now inherited 
+* from style.css. This CSS focuses only on the login section layout.
+*/
+
+/* 1. Ensure the login section takes up remaining viewport space to center the card */
+.login-section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Space for the fixed navbar */
+    padding-top: 80px; 
+    padding-bottom: 20px;
+}
+
+/* 2. Style the Login Card (Transparent, secure look) */
+.login-card {
+    width: 100%;
+    max-width: 420px;
+    padding: 40px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05); /* Translucent dark look */
+    border: 1px solid rgba(0, 196, 255, 0.4); /* Blue accent border */
+    backdrop-filter: blur(15px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7); /* Deep shadow for 3D effect */
+    transition: 0.4s;
+    margin: auto; /* Center in container */
+}
+
+/* Light Theme Adjustments for the Card */
+body.light .login-card {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.login-card h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #ff6b6b; /* Red accent for Secure/Private */
+    font-weight: 700;
+}
+body.light .login-card h2 {
+    color: #1e2738;
+}
+
+/* Input Box Styles */
+.input-box {
+    position: relative;
+    margin: 30px 0;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px 0;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #00c4ff50;
+    font-size: 18px;
+    color: #fff;
+    outline: none;
+    transition: border-bottom-color 0.3s;
+}
+
+.input-box input:focus {
+    border-bottom-color: #00c4ff;
+}
+
+body.light .input-box input {
+    color: #000;
+    border-bottom-color: #33333330;
+}
+
+body.light .input-box input:focus {
+    border-bottom-color: #00c4ff;
+}
+
+.input-box label {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    color: #aaa;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.input-box input:focus + label,
+.input-box input:valid + label,
+/* For readonly/disabled input fields */
+.input-box input[readonly] + label { 
+    top: -20px;
+    font-size: 14px;
+    color: #00c4ff;
+}
+
+body.light .input-box input:focus + label,
+body.light .input-box input:valid + label,
+body.light .input-box input[readonly] + label {
+    color: #1e2738;
+}
+
+/* Button Styles (Using Red/Secure accent) */
+.login-btn {
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(45deg, #ff6b6b, #cc5656); 
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+.login-btn:hover {
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.5);
+    background: linear-gradient(45deg, #cc5656, #ff6b6b);
+}
+
+body.light .login-btn {
+    background: linear-gradient(45deg, #1e2738, #2b3a55);
+}
+
+body.light .login-btn:hover {
+    box-shadow: 0 5px 15px rgba(30, 39, 56, 0.3);
+}
+
+/* Theme Toggle inside Form */
+.theme-toggle-wrapper {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 15px;
+}
+
+.toggle-theme-btn {
+    background: transparent;
+    border: 1px solid #00c4ff;
+    color: #00c4ff;
+    padding: 8px 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 0.9rem;
+}
+
+.toggle-theme-btn:hover {
+    background: #00c4ff;
+    color: #1e2738;
+}
+
+body.light .toggle-theme-btn {
+    border-color: #1e2738;
+    color: #1e2738;
+}
+
+body.light .toggle-theme-btn:hover {
+    background: #1e2738;
+    color: white;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 450px) {
+    .login-card {
+        padding: 30px 20px; 
+    }
+
+    .login-card h2 {
+        font-size: 1.5rem;
+    }
+}

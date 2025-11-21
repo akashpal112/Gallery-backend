@@ -1,0 +1,458 @@
+/* General Body and Typography */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1c6a3f; /* Deep purple-blue background */
+    color: #f0f0f0; /* Light text color */
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #694545;
+}
+
+p {
+    color: #c0c0c0;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Navbar */
+.navbar {
+    background: transparent;
+    transition: background-color 0.5s ease-in-out;
+    padding: 1rem 0;
+    box-shadow: none;
+    border-bottom: none;
+}
+
+.navbar.scrolled {
+    background-color: rgba(42, 101, 112, 0.95); /* Slightly darker on scroll */
+    box-shadow: 0 2px 10px rgba(213, 159, 159, 0.3);
+}
+
+.navbar-brand {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 1.8rem;
+    color: #fff !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-brand .fa-cloud-lock {
+    color: #815f9e; /* Purple accent for icon */
+}
+
+.navbar-nav .nav-link {
+    color: #e0e0e0 !important;
+    font-weight: 500;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #bb6bff !important; /* Purple accent on hover */
+}
+
+.btn-gradient {
+    background: linear-gradient(45deg, #bb6bff, #483a7c); /* Purple gradient button */
+    border: none;
+    border-radius: 50px;
+    padding: 10px 25px;
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-gradient:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(187, 107, 255, 0.4);
+    color: white; /* Ensure text remains white */
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: url('https://burst.shopifycdn.com/photos/beach-sunset-thailand.jpg?width=1000&format=pjpg&exif=0&iptc=0') no-repeat center center/cover;
+    background-attachment: fixed; /* Parallax effect */
+    color: white;
+    padding-top: 80px; /* Space for fixed navbar */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(158, 161, 86, 0.7); /* Darker overlay */
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+}
+
+.hero-content .subtitle {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #bb6bff; /* Purple accent */
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.hero-content h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4.5rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    color: #fff;
+    line-height: 1.1;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.6);
+}
+
+.hero-content h2 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 40px;
+    color: #e0e0e0;
+}
+
+.btn-hero-cta {
+    background: linear-gradient(45deg, #6e44ff, #bb6bff);
+    border: none;
+    border-radius: 50px;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 20px rgba(110, 68, 255, 0.4);
+}
+
+.btn-hero-cta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(110, 68, 255, 0.6);
+    color: white;
+}
+
+/* Sections General Styling */
+.section-heading {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    color: #e0e0e0;
+    margin-bottom: 15px;
+}
+
+.section-subheading {
+    font-size: 1.2rem;
+    color: #c0c0c0;
+    margin-bottom: 50px;
+}
+
+/* Features Section */
+.features-section {
+    background-color: #000000; /* Slightly lighter than body for contrast */
+}
+
+.feature-card {
+    background-color: #21203d; /* Dark card background */
+    padding: 40px 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    border-bottom: 5px solid #6a9f00; /* Accent border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%; /* Ensure equal height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(238, 70, 70, 0.4);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    color: #045009; /* Purple accent */
+    margin-bottom: 20px;
+    animation: pulse 2s infinite ease-in-out; /* Subtle animation */
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.feature-card h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.feature-card p {
+    font-size: 1rem;
+    color: #c0c0c0;
+}
+
+/* Security Section */
+.security-section {
+    background-color: #0f0b23;
+    padding-bottom: 80px;
+}
+
+.security-content {
+    background-color: #21203d;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 213, 255, 0.2);
+    border-left: 5px solid #3d0071;
+    text-align: left;
+}
+
+.floating-icon {
+    font-size: 3.5rem;
+    color: #1bb11d;
+    margin-bottom: 20px;
+    display: block;
+    text-align: center;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.security-content .lead {
+    font-size: 1.15rem;
+    margin-bottom: 25px;
+    color: #e0e0e0;
+}
+
+.security-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 25px;
+}
+
+.security-list li {
+    font-size: 1.05rem;
+    margin-bottom: 12px;
+    color: #c0c0c0;
+}
+
+.security-list li .fa-check-circle {
+    color: #4CAF50; /* Green checkmark */
+    font-size: 1.2rem;
+}
+
+.disclaimer {
+    font-size: 0.9rem;
+    color: #999;
+    margin-top: 40px;
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, #1a192f, #4c3e3e); /* Dark gradient */
+    padding: 80px 0;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.cta-section h2 {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.cta-section .lead {
+    font-size: 1.4rem;
+    margin-bottom: 40px;
+    color: #ffffff;
+}
+
+/* Footer */
+.footer {
+    background-color: #050411; /* Even darker footer */
+    color: #c0c0c0;
+    padding: 60px 0 30px;
+    font-size: 0.9rem;
+    border-top: 3px solid #6e44ff; /* Purple accent border */
+}
+
+.footer h5 {
+    color: #0800fc;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+    color: #bb6bff;
+}
+
+.social-links a {
+    color: #371952;
+    margin-right: 15px;
+    font-size: 1.6rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #1a0566;
+}
+
+.copyright {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(141, 141, 141, 0.1);
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+/* Gallery-specific page styling (for gallery.html, etc.) */
+.gallery-page {
+    background: #1a192f; /* Consistent background for interior pages */
+    min-height: 100vh;
+}
+.gallery-page .navbar {
+    background-color: rgba(12, 11, 30, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Uploader, Login/Register Forms specific to other pages */
+.auth-container, .upload-area {
+    background: #21203d !important;
+    border-color: #6e44ff !important;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.auth-container input {
+    background-color: #0c0b1e !important;
+    border-color: #6e44ff !important;
+    color: #e0e0e0 !important;
+}
+
+.auth-container input::placeholder {
+    color: #a0a0a0 !important;
+}
+
+/* Lightbox styles are okay as is, but ensure colors align */
+.lightbox-nav-btn:hover {
+    background: rgba(187, 107, 255, 0.8) !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .hero-content h1 {
+        font-size: 3.5rem;
+    }
+    .hero-content h2 {
+        font-size: 1.5rem;
+    }
+    .btn-hero-cta {
+        padding: 12px 30px;
+        font-size: 1.1rem;
+    }
+    .section-heading {
+        font-size: 2.5rem;
+    }
+    .section-subheading {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+    .hero-section {
+        height: 80vh; /* Adjust hero height for smaller screens */
+    }
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+    .hero-content h2 {
+        font-size: 1.2rem;
+    }
+    .feature-card {
+        padding: 30px 20px;
+    }
+    .feature-card h3 {
+        font-size: 1.5rem;
+    }
+    .security-content {
+        padding: 30px;
+        text-align: center;
+    }
+    .security-list {
+        text-align: left; /* Keep list items left-aligned */
+    }
+    .cta-section h2 {
+        font-size: 2.5rem;
+    }
+    .cta-section .lead {
+        font-size: 1.2rem;
+    }
+    .footer .row > div {
+        margin-bottom: 25px;
+    }
+    .footer .social-links {
+        margin-top: 15px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    .hero-content h2 {
+        font-size: 1rem;
+    }
+    .btn-hero-cta {
+        padding: 10px 25px;
+        font-size: 1rem;
+    }
+    .section-heading {
+        font-size: 2rem;
+    }
+    .section-subheading {
+        font-size: 1rem;
+    }
+}
